@@ -19,8 +19,9 @@ import java.io.IOException;
 }
 */
 
-/* Задача2: Вычислить n! (произведение чисел от 1 до n)
 
+// Задача2: Вычислить n! (произведение чисел от 1 до n)
+/*
 public class HomeWork_1 {
     public static void main(String[] args)  {
     System.out.println(productOfNumbers(5));
@@ -40,24 +41,22 @@ public class HomeWork_1 {
 /* 
 public class HomeWork_1{
     public static void main(String[] args){
-        try(Scanner tru = new Scanner(System.in)){
-            for(int i = 2; i <= 1000; i ++){
-                boolean isPrime = i >= 2;
-                for (int j = 2; j < i; j ++){
-                    if(i % j == 0){
-                        isPrime = false; break;  
-                    }
+        for(int i = 2; i <= 1000; i ++){
+            boolean isPrime = i >= 2;
+            for (int j = 2; j < i; j ++){
+                if(i % j == 0){
+                    isPrime = false; break;  
                 }
-            if(isPrime)
-            System.out.println(i);  
             }
-        }
+        if(isPrime)
+        System.out.println(i);  
+        }   
     }
 }
 */
 
 //Задача4:  Реализовать простой калькулятор (введите первое число, введите второе число, введите требуемую операцию, ответ)
-/*
+
 public class HomeWork_1{
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -93,4 +92,3 @@ public class HomeWork_1{
         System.out.println(correct ? "Ответ: " + answer: "Неверная операция!");
     }
 }
-*/
