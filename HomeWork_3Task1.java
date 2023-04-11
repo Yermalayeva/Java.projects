@@ -1,13 +1,21 @@
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+/* 
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
-
+*/
 //Пусть дан произвольный список целых чисел, удалить из него четные числа.
 /**
  * HomeWork_3Task1
  */
-public class HomeWork_3Task1 {
 
+public class HomeWork_3Task1 {
+/* 
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         int n;
@@ -38,4 +46,16 @@ public class HomeWork_3Task1 {
         }
         return Arrays.copyOf(array, i);
     }
+    */
+    public static void main(String[] args) {        
+        List <Integer> listInt = Arrays.asList(5,4,8,3,2,6);        
+        List <Integer> result = listInt.stream().reduce(0, (a, b) -> a + b)%2 == 0 ? 
+                filter(listInt, p->p%2==0) : filter(listInt, p->p%2!=0);
+        System.out.println(result);        
+    }
+
+    private static List <Integer> filter(List <Integer> listInt, Predicate <Integer> predicate) {
+        return listInt.stream().filter(predicate).collect(Collectors.toList());
+    }
 }
+
