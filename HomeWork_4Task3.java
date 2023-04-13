@@ -18,7 +18,7 @@ static void inputLinkedList(LinkedList<Integer> list){
         System.out.print("size: ");
         int size = Integer.parseInt(scanner.nextLine());
         for (int i = 0; i < size; i++) {
-            System.out.print("#" + i + ": ");
+            System.out.print("Введите число элемента # " + i + " ");
             list.add(Integer.parseInt(scanner.nextLine()));
         }
     } catch (NumberFormatException e) {
